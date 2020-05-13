@@ -21,7 +21,7 @@ export default function Details(props) {
     document.addEventListener('click', listener)
 
     return () => {
-      // CLEANIN UP AFTER AN EFFECT
+      // CLEANING UP AFTER AN EFFECT
       // here we clean up, after that ^ effect there
       console.log('Details is about to become unmounted from the DOM')
       document.removeEventListener('click', listener)
