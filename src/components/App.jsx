@@ -25,9 +25,9 @@ export default function App() {
   useEffect(() => {
     // this code in here will run, after the first DOM surgery only
     // BASE_URL and API_KEY (http://localhost:4000/friends?api_key=xyz)
-    axios(``)
+    axios(`${BASE_URL}/friends?api_key=${API_KEY}`)
       .then(res => {
-
+        debugger
       })
       .catch(err => {
         debugger
