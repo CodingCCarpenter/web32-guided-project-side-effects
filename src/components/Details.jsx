@@ -8,7 +8,7 @@ export default function Details(props) {
 
   // TASK 4 - Create a side effect that runs only after first render.
   useEffect(() => {
-    console.log('I run after the first DOM surgery ONLY')
+    console.log('AFTER FIRST RENDER ONLY')
   }, [])
 
   // TASK 5 - Create a side effect that runs only after first render
@@ -39,7 +39,7 @@ export default function Details(props) {
 
   // TASK 7 - Create a side effect that runs when a particular variable changes.
   useEffect(() => {
-    console.log(`The friendId changed: ${friendId}`)
+    console.log(`FIRST RENDER, OR, The friendId changed`)
 
     // TASK 8 - Use an effect to fetch the details of the current friend.
     // The URL should end up looking like `http://localhost:4000/friends/1?api_key=xyz`
