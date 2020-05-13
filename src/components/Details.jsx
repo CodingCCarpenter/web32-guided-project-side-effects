@@ -36,6 +36,13 @@ export default function Details(props) {
     // On success, shove the details of the friend in `details` slice of state
   }, [friendId])
 
+  useEffect(() => {
+    axios.get(`${BASE_URL}/friends/${friendId}?api_key=${API_KEY}`)
+      .then((response) => {
+        setDetails(response.data)
+      })
+  }, [])
+
   // console.log('Details is rendering ' + friendId)
 
   if (!details) {
