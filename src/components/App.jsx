@@ -27,7 +27,7 @@ export default function App() {
     // BASE_URL and API_KEY (http://localhost:4000/friends?api_key=xyz)
     axios(`${BASE_URL}/friends?api_key=${API_KEY}`)
       .then(res => {
-        debugger
+        setFriends(res.data)
       })
       .catch(err => {
         debugger
