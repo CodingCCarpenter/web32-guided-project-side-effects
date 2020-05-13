@@ -27,6 +27,9 @@ export default function Details(props) {
   })
 
   // TASK 7 - Create a side effect that runs when a particular variable changes.
+  useEffect(() => {
+    console.log(`The friendId changed: ${friendId}`)
+  }, [friendId])
 
   // TASK 8 - Use an effect to fetch the details of the current friend.
   // The URL should end up looking like `http://localhost:4000/friends/1?api_key=xyz`
@@ -35,7 +38,7 @@ export default function Details(props) {
   // console.log('Details is rendering ' + friendId)
 
   if (!details) {
-    return 'No Details'
+    return `No Details for friend with id ${friendId}`
   }
   return (
     <div className='container'>
