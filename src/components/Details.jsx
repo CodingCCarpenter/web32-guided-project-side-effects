@@ -47,7 +47,7 @@ export default function Details(props) {
       })
   }, [friendId])
 
-  // console.log('Details is rendering ' + friendId)
+  console.log('Details is rendering ' + friendId)
 
   if (!details) {
     return `No Details for friend with id ${friendId}`
