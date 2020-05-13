@@ -14,6 +14,12 @@ export default function Details(props) {
   // TASK 5 - Create a side effect that runs only after first render
   // and puts a 'click' event handler on document.
   // See what happens if we don't clean up.
+  useEffect(() => {
+    const listener = event => {
+      console.log('You clicked the document')
+    }
+    document.addEventListener('click', listener)
+  }, [])
 
   // TASK 6 - Create a side effect that runs after every render.
 
@@ -23,7 +29,7 @@ export default function Details(props) {
   // The URL should end up looking like `http://localhost:4000/friends/1?api_key=xyz`
   // On success, shove the details of the friend in `details` slice of state
 
-  console.log('Details is rendering ' + friendId)
+  // console.log('Details is rendering ' + friendId)
 
   if (!details) {
     return 'No Details'
