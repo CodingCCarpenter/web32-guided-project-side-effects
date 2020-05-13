@@ -7,6 +7,9 @@ export default function Details(props) {
   const [details, setDetails] = useState(null)
 
   // TASK 4 - Create a side effect that runs only after first render.
+  useEffect(() => {
+    console.log('I run after the first DOM surgery')
+  }, []);
 
   // TASK 5 - Create a side effect that runs only after first render
   // and puts a 'click' event handler on document.
@@ -20,10 +23,11 @@ export default function Details(props) {
   // The URL should end up looking like `http://localhost:4000/friends/1?api_key=xyz`
   // On success, shove the details of the friend in `details` slice of state
 
-  if (!details) {
-    return null
-  }
+  console.log('Details is rendering ' + friendId)
 
+  if (!details) {
+    return 'No Details'
+  }
   return (
     <div className='container'>
       <h2>Details:</h2>
