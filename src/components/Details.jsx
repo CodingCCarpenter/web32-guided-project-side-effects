@@ -8,7 +8,7 @@ export default function Details(props) {
 
   // TASK 4 - Create a side effect that runs only after first render.
   useEffect(() => {
-    console.log('I run after the first DOM surgery')
+    console.log('I run after the first DOM surgery ONLY')
   }, []);
 
   // TASK 5 - Create a side effect that runs only after first render
@@ -22,6 +22,9 @@ export default function Details(props) {
   }, [])
 
   // TASK 6 - Create a side effect that runs after every render.
+  useEffect(() => {
+    console.log('After first DOM surgery... and ALL subsequent DOM surgeries')
+  })
 
   // TASK 7 - Create a side effect that runs when a particular variable changes.
 
