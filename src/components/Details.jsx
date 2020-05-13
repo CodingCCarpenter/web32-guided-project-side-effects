@@ -34,14 +34,11 @@ export default function Details(props) {
     // TASK 8 - Use an effect to fetch the details of the current friend.
     // The URL should end up looking like `http://localhost:4000/friends/1?api_key=xyz`
     // On success, shove the details of the friend in `details` slice of state
-  }, [friendId])
-
-  useEffect(() => {
     axios.get(`${BASE_URL}/friends/${friendId}?api_key=${API_KEY}`)
       .then((response) => {
         setDetails(response.data)
       })
-  }, [])
+  }, [friendId])
 
   // console.log('Details is rendering ' + friendId)
 
