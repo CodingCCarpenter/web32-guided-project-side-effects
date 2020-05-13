@@ -9,7 +9,7 @@ export default function Details(props) {
   // TASK 4 - Create a side effect that runs only after first render.
   useEffect(() => {
     console.log('I run after the first DOM surgery ONLY')
-  }, []);
+  }, [])
 
   // TASK 5 - Create a side effect that runs only after first render
   // and puts a 'click' event handler on document.
