@@ -30,8 +30,11 @@ export default function Details(props) {
 
   // TASK 6 - Create a side effect that runs after every render.
   useEffect(() => {
-    console.log('After first DOM surgery... and ALL subsequent DOM surgeries')
+    console.log('FOO EFFECT, After first DOM surgery... and ALL subsequent DOM surgeries')
     // if you change state or props, re-render happens and this runs again
+    return () => {
+      console.log('FOO EFFECT CLEANUP, cleaning up the previous effect before the next effect runs')
+    }
   })
 
   // TASK 7 - Create a side effect that runs when a particular variable changes.
